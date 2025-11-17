@@ -20,7 +20,6 @@ The entire workflow—from preprocessing, training, evaluation, and TFLite quant
 * [How to Run the Notebook](#how-to-run-the-notebook)
 * [How to Deploy on Raspberry Pi Pico](#how-to-deploy-on-raspberry-pi-pico)
 * [Example MicroPython Inference Script](#example-micropython-inference-script)
-* [Requirements](#requirements)
 * [Future Enhancements](#future-enhancements)
 * [Author](#author)
 
@@ -159,7 +158,6 @@ Your notebook automatically generates:
 * **Confusion Matrix**
 * **Accuracy & Loss Graphs**
 * **Precision/Recall/F1 Report**
-* **model_performance.png**
 
 These files are saved in the repo after training.
 
