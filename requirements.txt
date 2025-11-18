@@ -1,0 +1,157 @@
+# ============================================================================
+# ANIMAL SPECIES AUDIO CLASSIFICATION - REQUIREMENTS
+# Low-Power Offline Device for Biodiversity Monitoring
+# ============================================================================
+# Author: Amal Madhu
+# Date: October 23, 2025
+#
+# Installation: pip install -r requirements.txt
+# ============================================================================
+
+# Core Scientific Computing & Data Processing
+numpy>=1.24.0,<2.0.0                    # Numerical computing
+pandas>=2.0.0,<3.0.0                    # Data manipulation and analysis
+scipy>=1.10.0,<2.0.0                    # Scientific computing utilities
+
+# Machine Learning & Deep Learning
+tensorflow>=2.13.0,<3.0.0               # Deep learning framework (TensorFlow)
+keras>=2.13.0,<3.0.0                    # High-level neural networks API
+scikit-learn>=1.3.0,<2.0.0              # Machine learning algorithms (preprocessing, metrics)
+
+# Audio Processing
+librosa>=0.10.0,<1.0.0                  # Audio analysis and feature extraction
+soundfile>=0.12.0,<1.0.0                # Reading/writing sound files (WAV, FLAC, etc)
+
+# Visualization & Plotting
+matplotlib>=3.7.0,<4.0.0                # Plotting and visualization
+seaborn>=0.12.0,<1.0.0                  # Statistical data visualization
+
+# Image Processing
+Pillow>=9.5.0,<11.0.0                   # Python Imaging Library (for species images)
+
+# Utilities & APIs
+requests>=2.31.0,<3.0.0                 # HTTP library (downloading images)
+python-dotenv>=1.0.0,<2.0.0             # Environment variable management
+
+# Optional: Development & Testing
+jupyter>=1.0.0,<2.0.0                   # Jupyter notebook for interactive development
+ipython>=8.0.0,<9.0.0                   # IPython for enhanced interactive shell
+tqdm>=4.66.0,<5.0.0                     # Progress bars for loops
+
+# ============================================================================
+# SPECIFIC VERSION NOTES:
+# ============================================================================
+#
+# TensorFlow 2.13+:
+#   - Required for TFLite quantization support
+#   - GPU support optional (install tensorflow-gpu if CUDA available)
+#   - For CPU-only: tensorflow will work fine
+#
+# Librosa 0.10+:
+#   - Latest stable with improved Mel-spectrogram performance
+#   - Better memory efficiency for large audio files
+#
+# scikit-learn 1.3+:
+#   - New metrics and preprocessing improvements
+#   - Better class weight computation
+#
+# Pillow 9.5+:
+#   - Enhanced image processing with LANCZOS resampling
+#   - Better memory management for large images
+#
+# ============================================================================
+# INSTALLATION INSTRUCTIONS:
+# ============================================================================
+#
+# 1. Basic Installation (CPU):
+#    pip install -r requirements.txt
+#
+# 2. GPU Support (NVIDIA CUDA):
+#    pip install tensorflow-gpu>=2.13.0
+#    pip install -r requirements.txt
+#
+# 3. For Google Colab (already includes most packages):
+#    # Just install additional requirements:
+#    !pip install -r requirements.txt
+#
+# 4. For Anaconda:
+#    conda create -n animal-classifier python=3.10
+#    conda activate animal-classifier
+#    pip install -r requirements.txt
+#
+# ============================================================================
+# EDGE DEPLOYMENT (Lightweight):
+# ============================================================================
+#
+# For deployment on edge devices (Raspberry Pi, ESP32), use minimal setup:
+#
+# Create requirements-edge.txt with:
+#   - tensorflow-lite (instead of full tensorflow)
+#   - numpy (core computation)
+#   - scipy (basic operations)
+#   - librosa (audio processing)
+#   - Pillow (image display)
+#
+# ============================================================================
+# TROUBLESHOOTING:
+# ============================================================================
+#
+# ImportError: No module named 'tensorflow':
+#   → pip install --upgrade tensorflow
+#
+# CUDA/GPU not detected:
+#   → pip install tensorflow-gpu
+#   → Ensure NVIDIA drivers and CUDA toolkit are installed
+#
+# Audio file format not supported:
+#   → pip install --upgrade librosa soundfile
+#   → Ensure FFmpeg is installed (apt-get install ffmpeg)
+#
+# Image download fails (403 Forbidden):
+#   → requests library with User-Agent headers (already in code)
+#   → Check internet connection
+#
+# Memory errors during training:
+#   → Reduce batch_size in code (default: 32)
+#   → Reduce MAX_SAMPLES_PER_SPECIES
+#   → Use GPU (install tensorflow-gpu)
+#
+# ============================================================================
+# PYTHON VERSION COMPATIBILITY:
+# ============================================================================
+#
+# Recommended: Python 3.10 or 3.11
+# Minimum: Python 3.8
+# Maximum: Python 3.11 (TensorFlow compatibility)
+#
+# Check your Python version:
+# python --version
+#
+# ============================================================================
+# PLATFORM-SPECIFIC NOTES:
+# ============================================================================
+#
+# Windows 10/11:
+#   - Most packages work out-of-the-box
+#   - Use Visual Studio Build Tools for compilation if needed
+#
+# macOS (Intel/M1/M2):
+#   - M1/M2 chips need tensorflow-macos
+#   - Alternative: conda install tensorflow::tensorflow
+#
+# Linux (Ubuntu/Debian):
+#   - Works seamlessly
+#   - Install system dependencies: apt-get install build-essential python3-dev
+#
+# ============================================================================
+# VERIFICATION:
+# ============================================================================
+#
+# After installation, verify with:
+#   python -c "import tensorflow as tf; print(tf.__version__)"
+#   python -c "import librosa; print(librosa.__version__)"
+#   python -c "import numpy; print(numpy.__version__)"
+#
+# Run the notebook after verification!
+#
+# ============================================================================
