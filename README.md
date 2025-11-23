@@ -1,4 +1,4 @@
-# 🐾 **Low-Power Animal Audio Classifier for Biodiversity Monitoring**
+# **Low-Power Animal Audio Classifier for Biodiversity Monitoring**
 
 *A TinyML Project for Real-Time Species Detection on Edge Devices*
 
@@ -13,7 +13,7 @@ The entire workflow—from preprocessing, training, evaluation, and TFLite quant
 
 ---
 
-## ✨ **Key Features**
+## **Key Features**
 
 - **99.23% Test Accuracy** on 10 species classification
 - **Real-time audio processing** with 3-second audio segments
@@ -28,7 +28,7 @@ The entire workflow—from preprocessing, training, evaluation, and TFLite quant
 
 ---
 
-## 📊 **Model Performance**
+## **Model Performance**
 
 | Metric | Value |
 |--------|-------|
@@ -51,7 +51,7 @@ All species achieve >95% accuracy, with most achieving 100% accuracy.
 
 ---
 
-## 📁 **Dataset Structure**
+## **Dataset Structure**
 
 Dataset source: [YashNita/Animal-Sound-Dataset](https://github.com/YashNita/Animal-Sound-Dataset.git)
 
@@ -76,13 +76,16 @@ dataset/
 - **Validation**: 258 samples (15%)
 - **Test**: 259 samples (15%)
 
+### Naming Note
+Some datasets may have class folders in non-English names (e.g., Turkish). If your environment fails to recognize them, rename folders to English equivalents (e.g., `Kedi → Cat`, `Aslan → Lion`) to avoid path and Unicode issues.
+
 ### Data Augmentation Techniques:
 1. **Noise Addition**: Gaussian noise (factor 0.005)
 2. **Time Shifting**: Random temporal shifts (up to 20%)
 
 ---
 
-## 🏗️ **Model Architecture**
+## **Model Architecture**
 
 **Input Shape**: `(128, 130, 1)` - Mel Spectrogram  
 **Total Parameters**: 208,362
@@ -121,9 +124,9 @@ Dense(10, Softmax)
 
 ---
 
-## 🖥️ **How to Run the Notebook**
+## **How to Run the Notebook**
 
-### **🚀 Quick Start - Google Colab (Recommended)**
+### **Quick Start - Google Colab (Recommended)**
 
 <a href="https://colab.research.google.com/drive/12Spuza3D_Qb27iK9Ls4D4jU59zvYmocv?usp=sharing" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" height="40"/>
@@ -167,7 +170,7 @@ jupyter notebook SiMoni.ipynb
 
 ---
 
-## ⚙️ **TensorFlow Lite Optimization**
+## **TensorFlow Lite Optimization**
 
 The model undergoes dynamic range quantization:
 
@@ -211,9 +214,8 @@ saved_files/
 ## 📧 **Contact & Support**
 
 **Amal Madhu**  
-🔗 GitHub: [@AbyssDrn](https://github.com/AbyssDrn)  
-📧 Email: [your-email@example.com]  
-💼 LinkedIn: [Your LinkedIn Profile]
+GitHub: [@AbyssDrn](https://github.com/AbyssDrn)  
+Email: [amalmadhu04022001@gmail.com]  
 
 **Project Repository**: [https://github.com/AbyssDrn/Animal-Sound-Classifier](https://github.com/AbyssDrn/Animal-Sound-Classifier)  
 **Google Colab Notebook**: [Open in Colab](https://colab.research.google.com/drive/12Spuza3D_Qb27iK9Ls4D4jU59zvYmocv?usp=sharing)
