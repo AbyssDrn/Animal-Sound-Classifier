@@ -194,7 +194,7 @@ This makes the model suitable for:
 
 ---
 
-## 📦 **Generated Outputs**
+## **Generated Outputs**
 
 After running the notebook, these files are created in `saved_files/`:
 
@@ -211,7 +211,7 @@ saved_files/
 
 ---
 
-## 📧 **Contact & Support**
+## **Contact & Support**
 
 **Amal Madhu**  
 GitHub: [@AbyssDrn](https://github.com/AbyssDrn)  
